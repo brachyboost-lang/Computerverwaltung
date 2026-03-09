@@ -8,7 +8,7 @@ namespace Computerverwaltung
     internal class ITVerwaltung
     {
         private readonly List<Computer> ComputerList;
-        private int computerAmount;
+        private int? computerAmount;
 
         public ITVerwaltung()
         {
