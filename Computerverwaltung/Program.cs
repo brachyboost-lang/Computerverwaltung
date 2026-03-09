@@ -23,10 +23,10 @@ namespace Computerverwaltung
     }
     internal class Terminal : Computer
     {
-        public object ConnectedServer { get; set; }
+        public Server ConnectedServer { get; set; }
         public string Location { get; set; }
 
-        public Terminal(string name, string ip, object ConnectedServer, string Location) : base(name, ip)
+        public Terminal(string name, string ip, Server ConnectedServer, string Location) : base(name, ip)
         {
             this.ConnectedServer = ConnectedServer;
             this.Location = Location;
