@@ -17,6 +17,10 @@ namespace Computerverwaltung
             this.RamSize = ramSize;
             this.HarddriveSize = harddriveSize;
         }
+        public override string ToString()
+        {
+            return base.ToString() + $"CPU Power:\t{CpuPower} GHz\nRAM Size:\t{RamSize} GB\nHarddrive Size:\t{HarddriveSize} GB\n";
+        }
     }
 
     internal class GraphicWorkstation : OfficeWorkstation
@@ -28,6 +32,10 @@ namespace Computerverwaltung
         {
             this.GpuName = gpuName;
             this.MonitorSize = monitorSize;
+        }
+        public override string ToString()
+        {
+            return base.ToString() + $"GPU Name:\t{GpuName}\nMonitor Size:\t{MonitorSize} inch\n";
         }
     }
 }
