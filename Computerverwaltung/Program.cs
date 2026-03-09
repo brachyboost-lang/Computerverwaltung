@@ -6,12 +6,11 @@ namespace Computerverwaltung
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Mal gucken ob es schlau war so viele strings zu nutzen?");
-            Console.WriteLine("Hab doch wieder in int umgewandelt in Buero.cs");
+            
         }
     }
 
-    public class Computer
+    internal class Computer
     {
         public string Name { get; set; }
         public string IP { get; set; }
@@ -22,18 +21,36 @@ namespace Computerverwaltung
             this.IP = IP;
         }
     }
-    public class Terminal
+    internal class Terminal : Computer
     {
-        string ConnectedServer { get; set; }
-        string Location { get; set; }
+        public object ConnectedServer { get; set; }
+        public string Location { get; set; }
+
+        public Terminal(string name, string ip, object ConnectedServer, string Location) : base(name, ip)
+        {
+            this.ConnectedServer = ConnectedServer;
+            this.Location = Location;
+        }
     }
-    public class Server
+    internal class Server : Computer
     {
-        int CpuAmount { get; set; }
-        int RamSize { get; set; }
-        int HarddriveAmount { get; set; }
-        int HarddriveSize { get; set; }
-        string Servertype { get; set; }
-        string NetworkSpeed { get; set; }
+        public int CpuAmount { get; set; }
+        public int CpuPower { get; set; }
+        public int RamSize { get; set; }
+        public int HarddriveAmount { get; set; }
+        public int HarddriveSize { get; set; }
+        public string Servertype { get; set; }
+        public string NetworkSpeed { get; set; }
+
+        public Server(string name, string ip, int cpuAmount, int cpuPower, int ramSize, int harddriveAmount, int harddriveSize, string servertype, string networkSpeed) : base(name, ip)
+        {
+            this.CpuAmount = cpuAmount;
+            this.CpuPower = cpuPower;
+            this.RamSize = ramSize;
+            this.HarddriveAmount = harddriveAmount;
+            this.HarddriveSize = harddriveSize;
+            this.Servertype = servertype;
+            this.NetworkSpeed = networkSpeed;
+        }
     }
 }
