@@ -26,9 +26,9 @@ namespace Computerverwaltung
     internal class GraphicWorkstation : OfficeWorkstation
             {
         public string GpuName { get; set; }
-        public string MonitorSize { get; set; }
+        public double MonitorSize { get; set; }
 
-        public GraphicWorkstation(string name, string IP, int cpuPower, int ramSize, int harddriveSize, string gpuName, string monitorSize) : base(name, IP, cpuPower, ramSize, harddriveSize)
+        public GraphicWorkstation(string name, string IP, int cpuPower, int ramSize, int harddriveSize, string gpuName, double monitorSize) : base(name, IP, cpuPower, ramSize, harddriveSize)
         {
             this.GpuName = gpuName;
             this.MonitorSize = monitorSize;

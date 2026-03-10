@@ -2,18 +2,40 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using System.Runtime.CompilerServices;
 
 namespace Computerverwaltung
 {
     internal class ITVerwaltung
     {
         private readonly List<Computer> ComputerList;
-        private int? computerAmount;
+        private int computerAmount;
 
         public ITVerwaltung()
         {
             ComputerList = new List<Computer>();
             computerAmount = ComputerList.Count;
+        }
+        public List<Computer> Computers
+        {
+            get { return ComputerList; }
+        }
+        public int ComputerAmount
+        {
+            get { return computerAmount; }
+        }
+        public string RemoveComputerAt(int index)
+        {
+            if (index >= 0 && index < ComputerList.Count)
+            {
+                ComputerList.RemoveAt(index);
+                computerAmount = ComputerList.Count;
+                return $"Computer at index {index} removed successfully.";
+            }
+            else
+            {
+                return $"Invalid index: {index}. No computer removed.";
+            }
         }
         public string AddComputer(Computer computer)
         {
