@@ -121,7 +121,7 @@ namespace Computerverwaltung
                     break;
                 case "2":
                     int cpuAmount = GetUserInt("CPU Amount: ");
-                    int cpuPower = GetUserInt("CPU Power (GHz): ");
+                    double cpuPower = GetUserDouble("CPU Power (GHz): ");
                     int ramSize = GetUserInt("RAM Size (GB): ");
                     int hdAmount = GetUserInt("Harddrive Amount: ");
                     int hdSize = GetUserInt("Harddrive Size (GB): ");
@@ -167,7 +167,7 @@ namespace Computerverwaltung
                     Console.WriteLine("OfficeWorkstation angelegt.");
                     break;
                 case "5":
-                    int cpuPg = GetUserInt("CPU Power (GHz): ");
+                    double cpuPg = GetUserDouble("CPU Power (GHz): ");
                     int ramg = GetUserInt("RAM Size (GB): ");
                     int hdg = GetUserInt("Harddrive Size (GB): ");
                     string gpu = GetUserString("GPU Name: ");

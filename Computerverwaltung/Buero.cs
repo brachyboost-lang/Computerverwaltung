@@ -7,11 +7,11 @@ namespace Computerverwaltung
 
     internal class OfficeWorkstation : Computer
     {
-        public int CpuPower { get; set; }
+        public double CpuPower { get; set; }
         public int RamSize { get; set; }
         public int HarddriveSize { get; set; }
 
-        public OfficeWorkstation(string name, string IP, int cpuPower, int ramSize, int harddriveSize) : base(name, IP)
+        public OfficeWorkstation(string name, string IP, double cpuPower, int ramSize, int harddriveSize) : base(name, IP)
         {
             this.CpuPower = cpuPower;
             this.RamSize = ramSize;
@@ -28,7 +28,7 @@ namespace Computerverwaltung
         public string GpuName { get; set; }
         public double MonitorSize { get; set; }
 
-        public GraphicWorkstation(string name, string IP, int cpuPower, int ramSize, int harddriveSize, string gpuName, double monitorSize) : base(name, IP, cpuPower, ramSize, harddriveSize)
+        public GraphicWorkstation(string name, string IP, double cpuPower, int ramSize, int harddriveSize, string gpuName, double monitorSize) : base(name, IP, cpuPower, ramSize, harddriveSize)
         {
             this.GpuName = gpuName;
             this.MonitorSize = monitorSize;

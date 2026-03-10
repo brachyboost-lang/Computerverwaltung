@@ -65,14 +65,14 @@ namespace Computerverwaltung
     internal class Server : Computer
     {
         public int CpuAmount { get; set; }
-        public int CpuPower { get; set; }
+        public double CpuPower { get; set; }
         public int RamSize { get; set; }
         public int HarddriveAmount { get; set; }
         public int HarddriveSize { get; set; }
         public string Servertype { get; set; }
         public string NetworkSpeed { get; set; }
 
-        public Server(string name, string ip, int cpuAmount, int cpuPower, int ramSize, int harddriveAmount, int harddriveSize, string servertype, string networkSpeed) : base(name, ip)
+        public Server(string name, string ip, int cpuAmount, double cpuPower, int ramSize, int harddriveAmount, int harddriveSize, string servertype, string networkSpeed) : base(name, ip)
         {
             this.CpuAmount = cpuAmount;
             this.CpuPower = cpuPower;
